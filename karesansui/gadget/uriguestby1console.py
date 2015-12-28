@@ -71,7 +71,7 @@ class UriGuestBy1Console(Rest):
             self.view.host_ipaddr = socket.gethostbyname(segs['host'])
 #172.23.227.50
         except:
-            self.view.host_ipaddr = socket.gethostbyname(socket.gethostname())
+            self.view.host_ipaddr = socket.gethostbyname(socket.getfqdn())
 
         return True
 

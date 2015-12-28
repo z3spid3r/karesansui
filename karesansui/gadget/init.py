@@ -172,7 +172,7 @@ class Init(Rest):
         # Machine Table set.
         #user = session.query(User).filter(User.email == self.input.email).first()
         uuid = string_from_uuid(generate_uuid())
-        fqdn = socket.gethostname() 
+        fqdn = socket.getfqdn() 
         notebook = Notebook(u"", u"")
         machine  = Machine(user,
                        user,

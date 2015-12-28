@@ -87,7 +87,7 @@ class Console(Rest):
             try:
                 self.view.host_ipaddr = h_model.hostname.split(":")[0].strip()
             except:
-                self.view.host_ipaddr = socket.gethostbyname(socket.gethostname())
+                self.view.host_ipaddr = socket.gethostbyname(socket.getfqdn())
 
         return True
 
